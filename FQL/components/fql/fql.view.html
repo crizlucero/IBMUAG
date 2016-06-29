@@ -1,0 +1,21 @@
+<div layout="column">
+    <div flex="33">
+        <div id="Principal" class="md-headline">FQL</div>
+        <md-card id="InfoContent">
+            <md-card-content>
+                <md-content>
+                    {{vm.id}}
+                    </md-content>
+                    <md-content>
+                    {{vm.name}}
+                    </md-content>
+                    <md-content>
+                    {{vm.work}}
+                </md-content>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button ng-click="vm.FindInfo()">Consultar</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>
