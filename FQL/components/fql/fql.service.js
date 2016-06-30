@@ -12,9 +12,8 @@
 
     function FQLService($http) {
         var service = {};
- 
         var urlFQL = "https://graph.facebook.com/v2.6/";
-        var token = "&access_token=EAACEdEose0cBAK2BZARS5UpPsS5ZBs3oZBFDy5OqafDAXZC9sE6ymeOW8EuZA3mSLBheyzNwXlZBDZAgpgVqSnrkrG4k7eGZByfN6yiWZAvP0Gs4vE0sYf6tqPnhZBxsaLkkYldxBECbZBjlBvxAIAngyXQsfpGcZCarRGb201dYZB1687gZDZD";
+        var token = "&access_token=EAACEdEose0cBAESZAc4mxsVBO2BWHbtygGUYMyW0ZAZC00oRiP1x00UApec6S8obWizZBqnyemtRgt4NKEY1dAoBU84xYvdumgyiRaIPOMgGnCgH32wTKX3ZAFjfS7JjFDZC3HQFzkZBFR0w3ZCjYpQMfpTumpGbQ02ikaGQkWUKfgZDZD";
         
 
         service.getFBInfo = getFBInfo;
