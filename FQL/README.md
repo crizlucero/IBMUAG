@@ -2,7 +2,7 @@
 Ejemplo de busqueda en facebook
 Para ejecutar el ejemplo seguir las siguientes instrucciones en linux.
 
-``bash
+```bash
 #command to install npm
 sudo apt-get -y install npm
 
