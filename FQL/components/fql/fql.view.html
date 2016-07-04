@@ -1,21 +1,64 @@
 <div layout="column">
     <div flex="33">
         <div id="Principal" class="md-headline">FQL</div>
+
         <md-card id="InfoContent">
             <md-card-content>
                 <md-content>
-                    {{vm.id}}
-                    </md-content>
-                    <md-content>
-                    {{vm.name}}
-                    </md-content>
-                    <md-content>
-                    {{vm.work}}
+                    <md-card>
+                        <md-card-title>
+                            <md-card-title-text>                        
+                                <span class="md-headline">Get own information</span>                       
+                                <span class="md-subhead"></span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                            <md-content class="md-padding">                     
+                                <md-input-container class="md-block">
+                                    <label>ID</label>
+                                    <input ng-model="vm.id">
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>Nombre</label>
+                                    <input ng-model="vm.name">
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>Trabajo</label>
+                                </md-input-container>
+                                <textarea ng-model="vm.work" rows="12" cols="70"></textarea>
+                            </md-content>
+                        </md-card-content>      
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button ng-click="vm.FindInfo()">Consultar</md-button>
+                        </md-card-actions>
+                    </md-card>          
+                </md-content>
+                <md-content>
+                    <md-card>
+                        <md-card-title>
+                            <md-card-title-text>                        
+                                <span class="md-headline">Get other information</span>                       
+                                <span class="md-subhead"></span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                            <md-content class="md-padding"> 
+                                <md-input-container class="md-block">
+                                    <label>Persona</label>
+                                    <input ng-model="vm.person">
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>Informacíon</label>
+                                </md-input-container>
+                                <textarea ng-model="vm.info" rows="12" cols="70"></textarea>
+                            </md-content>
+                        </md-card-content>      
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button ng-click="vm.SearchInfo()">Consultar</md-button>
+                        </md-card-actions>
+                    </md-card>          
                 </md-content>
             </md-card-content>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button ng-click="vm.FindInfo()">Consultar</md-button>
-            </md-card-actions>
         </md-card>
     </div>
 </div>

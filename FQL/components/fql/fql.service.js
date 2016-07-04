@@ -8,20 +8,27 @@
         .module('starterApp')
         .factory('FQLService', FQLService);
 
-    FQLService.$inject = ['$http'];
+    FQLService.$inject = ['$http', ];
 
     function FQLService($http) {
         var service = {};
         var urlFQL = "https://graph.facebook.com/v2.6/";
-        var token = "&access_token=EAACEdEose0cBAESZAc4mxsVBO2BWHbtygGUYMyW0ZAZC00oRiP1x00UApec6S8obWizZBqnyemtRgt4NKEY1dAoBU84xYvdumgyiRaIPOMgGnCgH32wTKX3ZAFjfS7JjFDZC3HQFzkZBFR0w3ZCjYpQMfpTumpGbQ02ikaGQkWUKfgZDZD";
+        var token = "&access_token=EAACEdEose0cBAIYG3xODl67xmnBvqTq02CufdoHRxN4GMXV6hzaJj0eR0dKsTAZBhEqa7z35ifpicBtLeFGGTYlsPaqKBsUiQMvcbuZA1JyfMqAUokI7JWBG1XP6U8tNmuG5EjMcSBFncZCojHFmBzoKPILOJfkutKUzgXRFgZDZD";
         
 
         service.getFBInfo = getFBInfo;
+        service.searchInfo = searchInfo;
 
         return service;
 
         function getFBInfo() {
             var urlConsult = urlFQL + "me?fields=id%2Cname%2Cwork" + token;
+            return $http.get(urlConsult).then(handleSuccess, handleError('Error performing request to the server'));
+        }
+
+        function searchInfo(User) {
+            var urlConsult = urlFQL + "search?q=" + User + "&type=user" + token;
+            console.log(urlConsult);
             return $http.get(urlConsult).then(handleSuccess, handleError('Error performing request to the server'));
         }
 

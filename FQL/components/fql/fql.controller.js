@@ -15,13 +15,22 @@
         
         
         vm.FindInfo = FindInfo;
+        vm.SearchInfo = SearchInfo;
 
         function FindInfo(){
             FQLService.getFBInfo().then(function (response){
                 vm.id = response.id;
                 vm.name = response.name;
-                vm.work = response.work[0];
                 console.log(response);
+                vm.work = JSON.stringify(response.work[0], null, 4)
+                console.log(response);
+            });
+        }
+
+        function SearchInfo(){
+            console.log(vm.person);
+            FQLService.searchInfo(vm.person).then(function (response){
+                vm.info = JSON.stringify(response, null, 4);
             });
         }
 
